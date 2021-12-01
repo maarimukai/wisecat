@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    </style>
+    <title>Wise Cat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+</head>
+<body>
+    <nav>
+        <h5>Wise</h6>
+        <h2>Cat</h4>
+    </nav>
+    <section>
+        <div>
+            <h3 id="advice"></h3>
+            <p>-Wise Cat</p>
+        </div>
+        <img id="image" src="" alt="gatinhos">
+    </section>
+
+    <script>
+        $.ajax({
+            url: "https://api.adviceslip.com/advice",
+            success: response => {
+                var obj = JSON.parse(response);
+                console.log(obj.slip.advice);
+                const advice = obj.slip.advice;
+                $("#advice").text(`"${advice}"`);
+            }
+        })
+        $.ajax({
+            url: "https://api.thecatapi.com/v1/images/search?limit=1&size=full",
+
+            success: response => {
+                // var obj = JSON.parse(response);
+                console.log(response[0].url);
+                const url = response[0].url;
+                $("#image").attr("src", url);
+            }
+        })
+    </script>
+</body>
+
+</html>
