@@ -8,42 +8,45 @@ nav {
 
 section {
     display: flex;
-    justify-content: center;
     align-items: center;
-    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 25px;
-    margin-left: 100px;
     background-color: #ebe4e0;
     border-radius: 10px;
-    max-width: 500px;
+    max-width: 700px;
+    max-height: 400px;
 }
 
 h2 {
     color: #72005F;
     margin-top: 0;
+    font-size: 60px;
 }
 
 h5 {
     color: #BAA193;
     margin-bottom: 0;
     margin-top: 15px;
+    font-size: 20px;
 }
 
 h3 {
     color: #72005F;
-    max-width: 170px;
     margin-left: 20px;
+    font-size: 26px;
 }
 
 p {
     color: #BAA193;
     margin-left: 20px;
-    font-size: 13px;
+    font-size: 20px;
 }
 
 
 img {
-    max-width: 50%;
+    max-width: 400px;
+    max-height: 400px;
     margin-left: 30px;
     border-radius: 10px;
 }
